@@ -1,1 +1,8 @@
-# crud-cpf
+# CRUD-CPF
+
+These are the files for my first PHP/MySQL project. They are based on a CRUD that simulates the registration and login of a social network (the layouts were taken from the W3Schools template), and performs the functions of CREATE (creating and adding profiles to the database), READ (lists registered users in the "Friends" tab of the site), UPTADE (allows you to change e-mail and telephone information) and finally, DELETE (being able to delete the registration from the database).
+
+Program features: A user can only be registered by entering a CPF (which is the national ID used in BRAZIL, that contains 11 digits, being the last two the verification ones), which undergoes validation (validarCPF() function in the cadastro.php file), where only people who enter valid CPFs can be registered, i.e. those whose last check digits correspond to the sum, multiplication, division and subtraction of remainders according to the existing algorithm for CPF validation. The program also checks that the CPFs and E-mails entered do not already exist in the database, and if they do, does not allow the new registration to avoid duplicate content;
+
+The login is made using the CPF and password (the password could have been formatted in md5, to encrypt them), which leads to the user page that simulates a social network page. The user page displays all the person's public data (name, email, telephone number, location and date of birth), as well as the other entries in the database. The login takes place via PHP's sessions_start functions, which allow the person to access the page only while the session is active, to avoid basic security problems.
+
